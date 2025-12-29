@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Te amo, Fátima</title>
+
+<style>
+body {
+    margin: 0;
+    background: black;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* Contenedor */
+.container {
+    text-align: center;
+}
+
+/* Texto TE AMO */
+.neon-text {
+    font-size: 4.5em;
+    font-weight: bold;
+    color: #ff2f92;
+    text-shadow:
+        0 0 10px #ff2f92,
+        0 0 20px #ff2f92,
+        0 0 40px #ff2f92;
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Texto secundario */
+.sub-text {
+    font-size: 1.6em;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+
+/* Corazón */
+.heart {
+    position: relative;
+    width: 220px;
+    height: 200px;
+    margin: 40px auto;
+    animation: beat 1.2s infinite;
+}
+
+/* Mitad izquierda */
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 180px;
+    background: transparent;
+    border: 6px solid #ff2f92;
+    border-radius: 120px 120px 0 0;
+    top: 20px;
+    box-shadow:
+        0 0 15px #ff2f92,
+        0 0 30px #ff2f92;
+}
+
+/* Izquierda */
+.heart::before {
+    left: 100px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+/* Derecha */
+.heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+/* Animaciones */
+@keyframes glow {
+    from {
+        text-shadow:
+            0 0 5px #ff2f92,
+            0 0 15px #ff2f92,
+            0 0 30px #ff2f92;
+    }
+    to {
+        text-shadow:
+            0 0 20px #ff2f92,
+            0 0 40px #ff2f92,
+            0 0 60px #ff2f92;
+    }
+}
+
+@keyframes beat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="neon-text">TE AMO</div>
+
+    <div class="heart"></div>
+
+    <div class="sub-text">
+        Fátima,<br>
+        eres mi persona favorita
+    </div>
+</div>
+
+</body>
+</html>
